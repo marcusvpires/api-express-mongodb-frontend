@@ -18,6 +18,7 @@ export const navlinks = [
 ]
 
 import { Cog, Envelope, Code } from '@styled-icons/boxicons-regular';
+import Profile from '../components/Profile'
 
 export const navButtons = [
   {
@@ -41,4 +42,11 @@ export const navButtons = [
     Component: false,
     custom: false
   },
+  {
+    label: "Profile",
+    Icon: false,
+    action: false,
+    Component: Profile,
+    custom: true
+  }
 ]

@@ -28,14 +28,13 @@ const Navbar = () => {
       </S.Links>
 
       <S.Buttons>
-        {navButtons.map(({ label, Icon, action, Component, cuntom }, index) => (
+        {navButtons.map(({ label, Icon, action, Component, custom }, index) => (
           <S.ButtonBox key={index}>
-            {cuntom ? <Component /> : (
+            {custom ? <Component /> : (
               <S.Button title={label} onClick={action}><Icon /></S.Button>
             )}
           </S.ButtonBox>
         ))}
-        <S.Link></S.Link>
       </S.Buttons>
       
     </S.Wrapper>
