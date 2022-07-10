@@ -1,0 +1,29 @@
+{
+  "version": "0.1.0",
+  "configurations": [
+    {
+      "name": "dev",
+      "type": "node-terminal",
+      "request": "launch",
+      "command": "npm run dev"
+    },
+    {
+      "name": "build",
+      "type": "node-terminal",
+      "request": "launch",
+      "command": "npm run build"
+    },
+    {
+      "name": "start",
+      "type": "node-terminal",
+      "request": "launch",
+      "command": "npm run start"
+    },
+    {
+      "name": "lint",
+      "type": "node-terminal",
+      "request": "launch",
+      "command": "npm run lint"
+    },
+  ]
+}
