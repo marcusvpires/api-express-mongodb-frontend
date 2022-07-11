@@ -4,6 +4,19 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 import Layout from '../../components/Layout';
 
+const submit = (user) => {
+  const options = {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify(user)
+  };
+  
+  fetch('http://localhost:3000/api/users/', options)
+    .then(response => response.json())
+    .then(response => console.log(response))
+    .catch(err => console.error(err));
+}
+
 const schema = yup
   .object({
     name: yup.string().required(),
@@ -20,7 +33,7 @@ const RegisterPage = () => {
   } = useForm({
     resolver: yupResolver(schema),
   });
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = (data) => submit(data);
   return (
     <Layout>
       <Head>
