@@ -15,6 +15,10 @@ export const navlinks = [
     label: "Sobre",
     href: "/sobre"
   },
+  {
+    label: "Cadastrar",
+    href: "/usuario/cadastro"
+  },
 ]
 
 import { Cog, Envelope, Code } from '@styled-icons/boxicons-regular';
@@ -42,11 +46,11 @@ export const navButtons = [
     Component: false,
     custom: false
   },
-  {
-    label: "Profile",
-    Icon: false,
-    action: false,
-    Component: Profile,
-    custom: true
-  }
+  /*{
+      label: "Profile",
+      Icon: false,
+      action: false,
+      Component: Profile,
+      custom: true
+  }*/
 ]

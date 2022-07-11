@@ -63,6 +63,9 @@ const GlobalStyles = createGlobalStyle`
   	width: 100%;
   	height: auto;
   }
+  div, button, ul, li, section, input {
+    box-sizing: border-box;
+  }
 
   body {
     --bg-1: #ffffff;

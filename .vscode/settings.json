@@ -10,5 +10,6 @@
   "javascript.updateImportsOnFileMove.enabled": "never",
   "editor.parameterHints.enabled": false,
   "breadcrumbs.enabled": true,
+  "prettier.printWidth": 70
 }
 
