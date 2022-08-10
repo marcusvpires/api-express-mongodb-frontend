@@ -19,6 +19,10 @@ export const navlinks = [
     label: "Cadastrar",
     href: "/usuario/cadastro"
   },
+  {
+    label: "Entrar",
+    href: "/usuario/entrar"
+  }
 ]
 
 import { Cog, Envelope, Code } from '@styled-icons/boxicons-regular';

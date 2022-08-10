@@ -10,8 +10,10 @@ export const Wrapper = styled.section`
   border-bottom: 1px solid var(--border);
 `;
 
-export const Logo = styled.div`
+export const Logo = styled.a`
   display: flex;
+  text-decoration: none;
+  color: var(--txt-1);
 `;
 export const LogoText = styled.div`
   font-size: 1.5rem;

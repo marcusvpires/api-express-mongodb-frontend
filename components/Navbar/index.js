@@ -10,12 +10,14 @@ import { Layer } from '@styled-icons/boxicons-regular';
 const Navbar = () => {
   return (
     <S.Wrapper>
-      <S.Logo>
-        <S.LogoImage>
-          <Layer />
-        </S.LogoImage>
-        <S.LogoText>Autenticação</S.LogoText>
-      </S.Logo>
+      <Link href="/" passHref>
+        <S.Logo>
+          <S.LogoImage>
+            <Layer />
+          </S.LogoImage>
+          <S.LogoText>Autenticação</S.LogoText>
+        </S.Logo>
+      </Link>
       <S.Links>
         {navlinks.map(({ label, href }) => (
           <S.LinkBox key={href}>

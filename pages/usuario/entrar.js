@@ -2,33 +2,32 @@ import Head from 'next/head';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
-import useSWR from 'swr'
 import Layout from '../../components/Layout';
 
-
-
-const submit = (user) => {
+const submit = ({ email, password }) => {
   const options = {
-    method: 'POST',
-    headers: {'Content-Type': 'application/json'},
-    body: JSON.stringify(user)
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+      email: email,
+      password: password,
+    },
   };
-  
-  fetch(`http://localhost:3000/api/users/`, options)
-    .then(response => response.json())
-    .then(response => console.log(response))
-    .catch(err => console.error(err));
-}
+
+  fetch('http://localhost:3000/api/users/', options)
+    .then((response) => response.json())
+    .then((response) => console.log(response))
+    .catch((err) => console.error(err));
+};
 
 const schema = yup
   .object({
-    name: yup.string().required(),
     email: yup.string().required(),
     password: yup.string().required(),
   })
   .required();
 
-const RegisterPage = () => {
+const LoginPage = () => {
   const {
     register,
     handleSubmit,
@@ -44,9 +43,6 @@ const RegisterPage = () => {
         <meta name='description' content='Registrar' />
       </Head>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <input {...register('name')} />
-        <p>{errors.name?.message}</p>
-
         <input {...register('email')} />
         <p>{errors.email?.message}</p>
 
@@ -59,4 +55,4 @@ const RegisterPage = () => {
   );
 };
 
-export default RegisterPage;
+export default LoginPage;
